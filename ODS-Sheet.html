@@ -1,0 +1,122 @@
+<!-- Variables
+
+     attr_char_name         - Character Name
+     
+     attr_str               - Strength
+     attr_per               - Perception
+     attr_emp               - Empathy
+     attr_will              - Willpower
+     
+     attr_gest              - Gestalt Level
+     attr_gest_dic          - Gestalt Dice
+     attr_morale            - Morale Value
+     attr_cargo             - Cargo Level
+     attr_sp                - Survival Points
+     
+     attr_injnum            - Number of Injuries
+     attr_damage            - Numbe of Point of Damage Taken
+     attr_hp                - Health Points Remaining
+     
+     attr_defense           - Total Defense
+     attr_basedef           - Base Defense
+     attr_gearbon           - Gear Defense Bonus
+     attr_miscbon           - Gear Miscellaneous Bonus
+     
+     -->
+
+
+<!-- Basic Characer Info -->
+<div class='header'>
+    <label>Name:</label><input type="text" name="attr_char_name" />
+</div>
+
+<!-- Main Section -->
+<div class='sheet-3colrow'>
+    
+    <!-- Attributes -->
+    <div class='sheet-col'>
+        <h3 style="margin-bottom: 10px;">S.P.E.W. Attributes</h3>
+
+		<label>Strength</label><input type="number" name='attr_str' class='sheet-short'><button type='roll' name='roll_TestAttack' value='/roll 1d20 + @{Agility}'></button><br />
+		<label>Perception</label><input type="number" name='attr_per' class='sheet-short'><br />
+		<label>Empathy</label><input type="number" name='attr_emp' class='sheet-short'><br />
+		<label>Willpower</label><input type="number" name='attr_will' class='sheet-short'><br /><br />
+		
+		<label>Morale</label><input type="number" name='attr_morale' class='sheet-short'><br />
+        <label>Cargo</label><input type="number" name='attr_cargo' class='sheet-short'><br />
+        <label>Gestalt Lv.</label><input type="number" name='attr_gest' class='sheet-short'><br />
+        <label>Gestalt Dice</label><input type="number" name='attr_gest_dice' class='sheet-short'><br />
+        <label>S.P.</label><input type="number" name='attr_sp' class='sheet-short'><br />
+    </div>
+    
+    <!-- Calculations -->
+    <div class='sheet-col'>
+        <!-- Damage Section -->
+        <h3 style="margin-bottom: 10px;">Damage</h3>
+        
+        <label>Damage Taken</label><input type="number" name='attr_damage' class='sheet-short'><br />
+        <label>Damage Threshold</label><input type="number" name='attr_damage' class='sheet-short'><br />
+        <label>Health Points</label><input type="number" name='attr_hp' class='sheet-short' value=5><br />
+        
+        <h3 style="margin-bottom: 10px;"> Injuries </h3>
+            <fieldset class="repeating_injuries">            
+                <label>Injury</label><input type="textarea" name='attr_injdesc' style="width: 8em"><br />
+                <label>Effects</label><input type="textarea" name='attr_injdesc' style="width: 8em">
+            </fieldset>
+    
+   
+    </div>
+    
+    <div class='sheet-col'>
+        <!-- Defenses -->
+        <h3 style="margin-bottom: 10px;">Defenses</h3>
+        
+        <label>Base Defense</label><input type="number" name='attr_basedef' class='sheet-short' value=5><br />
+        <label>Gear Bonus</label><input type="number" name='attr_gearbon' class='sheet-short' value=5><br />
+        <label>Misc Bonus</label><input type="number" name='attr_miscbon' class='sheet-short' value=5><br />
+        <label>Defense</label><input type="number" name='attr_defense' class='sheet-short'><br />
+        
+        
+    </div>
+</div>
+
+<!-- Abilities -->
+<div class='sheet-2colrow'>
+    
+    <!-- Abilities/Handicaps/Motivations -->
+    <div class='sheet-col'>
+        <h3 style="margin-bottom: 10px;">Ability/Handicap/Motivation</h3>
+        <div class="inlineBlock">
+                <div class="column width50 inlineBlock textCenter bold italic">Name</div>
+                <div class="column width50 inlineBlock textCenter bold italic">Tier</div>
+            </div>
+        <fieldset class="repeating_abihanmot">            
+            <label>Name</label><input type="textarea" name='attr_abihanmot' style="width: 60%"><label>Tier</label><input type="number" name='attr_tiernum' style="width: 8em">
+        </fieldset>
+    
+   
+    </div>
+    
+    <div class='sheet-col'>
+        <!-- Defenses -->
+        <h3 style="margin-bottom: 10px;">Defenses</h3>
+        
+        <label>Base Defense</label><input type="number" name='attr_basedef' class='sheet-short' value=5><br />
+        <label>Gear Bonus</label><input type="number" name='attr_gearbon' class='sheet-short' value=5><br />
+        <label>Misc Bonus</label><input type="number" name='attr_miscbon' class='sheet-short' value=5><br />
+        <label>Defense</label><input type="number" name='attr_defense' class='sheet-short'><br />
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
